@@ -1,5 +1,6 @@
 const gameContainer = document.getElementById("game");
-
+let cardsFlipped = [];
+let clicked = 0;
 const COLORS = [
   "red",
   "blue",
@@ -60,9 +61,25 @@ function createDivsForColors(colorArray) {
 // TODO: Implement this function!
 function handleCardClick(event) {
   // you can use event.target to see which element was clicked
+  clicked += 1;
   for (let color of COLORS) {
     if (event.target.classList == color) {
       event.target.style.backgroundColor = color;
+    }
+  }
+  cardsFlipped.push(event.target);
+  if (cardsFlipped.length > 2) {
+    if (cardsFlipped[0].className == cardsFlipped[1].className) {
+      for (let card of cardsFlipped) {
+        card.removeEventListener("click", handleCardClick);
+      }
+      cardsFlipped = [];
+    }
+    if (cardsFlipped[0].className !== cardsFlipped[1].className) {
+      for (let card of cardsFlipped) {
+        card.style.backgroundColor = "white";
+      }
+      cardsFlipped = [];
     }
   }
 }
