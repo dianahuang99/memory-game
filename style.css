@@ -1,0 +1,27 @@
+#game div {
+  border: 1px solid black;
+  width: 15%;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.turnRed {
+  background-color: red;
+}
+
+.turnBlue {
+  background-color: blue;
+}
+
+.turnGreen {
+  background-color: green;
+}
+
+.turnOrange {
+  background-color: orange;
+}
+
+.turnPurple {
+  background-color: purple;
+}
