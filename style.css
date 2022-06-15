@@ -5,23 +5,3 @@
   margin: 10px;
   display: inline-block;
 }
-
-.turnRed {
-  background-color: red;
-}
-
-.turnBlue {
-  background-color: blue;
-}
-
-.turnGreen {
-  background-color: green;
-}
-
-.turnOrange {
-  background-color: orange;
-}
-
-.turnPurple {
-  background-color: purple;
-}

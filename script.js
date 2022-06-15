@@ -60,40 +60,12 @@ function createDivsForColors(colorArray) {
 // TODO: Implement this function!
 function handleCardClick(event) {
   // you can use event.target to see which element was clicked
-  console.log(event.target);
-  const divs = document.querySelectorAll("div");
-
-  for (let div of divs) {
-    if (div.classList.contains("red")) {
-      div.addEventListener("click", function () {
-        div.classList.add("turnRed");
-      });
-    } else if (div.classList.contains("blue")) {
-      div.addEventListener("click", function () {
-        div.classList.add("turnBlue");
-      });
-    } else if (div.classList.contains("green")) {
-      div.addEventListener("click", function () {
-        div.classList.add("turnGreen");
-      });
-    } else if (div.classList.contains("orange")) {
-      div.addEventListener("click", function () {
-        div.classList.add("turnOrange");
-      });
-    } else if (div.classList.contains("purple")) {
-      div.addEventListener("click", function () {
-        div.classList.add("turnPurple");
-      });
+  for (let color of COLORS) {
+    if (event.target.classList == color) {
+      event.target.style.backgroundColor = color;
     }
   }
 }
 
 // when the DOM loads
 createDivsForColors(shuffledColors);
-
-// const blueDiv = document.querySelectorAll(".blue");
-
-// for (div of blueDiv) {
-//   div.addEventListener("click", function () {});
-//   // div.style.backgroundColor = "blue";
-// }
