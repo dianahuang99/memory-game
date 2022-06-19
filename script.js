@@ -4,13 +4,13 @@ let correct = 0;
 let lockboard = false;
 const COLORS = [
   "#fdfdcb",
-  "#defcf9",
-  "#cadefc",
+  "#a8e6cf",
+  "#93deff",
   "#c3bef0",
   "#f4aeba",
   "#fdfdcb",
-  "#defcf9",
-  "#cadefc",
+  "#a8e6cf",
+  "#93deff",
   "#c3bef0",
   "#f4aeba",
 ];
