@@ -3,16 +3,16 @@ let cardsFlipped = [];
 let correct = 0;
 let lockboard = false;
 const COLORS = [
-  "red",
-  "blue",
-  "green",
-  "orange",
-  "purple",
-  "red",
-  "blue",
-  "green",
-  "orange",
-  "purple",
+  "#fdfdcb",
+  "#defcf9",
+  "#cadefc",
+  "#c3bef0",
+  "#f4aeba",
+  "#fdfdcb",
+  "#defcf9",
+  "#cadefc",
+  "#c3bef0",
+  "#f4aeba",
 ];
 
 // here is a helper function to shuffle an array
@@ -62,7 +62,6 @@ function createDivsForColors(colorArray) {
 // TODO: Implement this function!
 function handleCardClick(event) {
   // you can use event.target to see which element was clicked
-  console.log(correct);
   if (lockboard) return; //lock
   if (event.target == cardsFlipped[0]) return;
   for (let color of COLORS) {
@@ -88,7 +87,7 @@ function handleCardClick(event) {
       lockboard = true;
       for (let card of cardsFlipped) {
         setTimeout(() => {
-          card.style.backgroundColor = "white";
+          card.style.backgroundColor = "black";
           lockboard = false; //make sure this is in the timeout too
         }, "500");
       }
